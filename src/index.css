@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url(../src/assets/fonts/Lato-Regular.woff) format('woff');
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slotContainerInner {
+  aspect-ratio: 0.85;
+  width: 100%;
+  position:relative;
+}
+
+.canvasMainCol {
+  aspect-ratio: 0.85;
+  flex-direction: column;
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@container (min-aspect-ratio: 1/0.85) {
+  .slotContainerInner {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1.0;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .canvasMainCol {
+    aspect-ratio: 1.0;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+  }
+}
+
+.slotContainer {
+  container-type: size;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-grow: 1;
+}
+
+.slotCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.responsive-direction {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+}
+
+.responsive-direction-container {
+  container-name: wrapper;
+  container-type: size;
+  display: flex;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 500px) {
+  .responsive-direction {
+    flex-direction: row;
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive-item {
+    width: 100%;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+html {
+  background-color: #111318;
+  min-height: 100%;
+}
+
+.marginCentered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.noscroll::-webkit-scrollbar {
+  display: none;
+}
+
+.noscroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.userAvatar {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.menu-icon {
+  font-size: 18px;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.align-content-center {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.root-element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.main-content {
+  padding: 8px 0 0;
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 0;
+}
+
+.responsivePadding {
+  padding: 8px 0 0
+}
+
+.presentImgContainer {
+  left: 0px;
+  margin-right: 16px;
+  float: left;
+  margin-top: -44px;
+  width: 128px;
+  height: 128px;
+  position: absolute;
+}
+
+.presentTextContainer {
+  padding-left: 90px;
+}
+
+@media only screen and (min-width: 500px) {
+
+  .main-content {
+    padding: 24px 20px
+  }
+
+  .responsivePadding {
+    padding: 24px 20px 0px
+  }
+
+  .presentTextContainer {
+    padding-left: 110px;
+  }
+
+  .presentTextContainerGlow {
+    filter: drop-shadow(0px 0px 10px #ffffffff)
+  }
+
+  .presentImgContainer {
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .responsive-body-padding>.ant-card-body {
+    padding: 0px 0px 0px 0px !important;
+  }
+}
+
+.responsive-direction-content {
+  flex-grow: 1;
+}
+
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+h4 {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.layout-centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.win-message .ant-message-custom-content {
+  display: flex;
+  align-items: center;
+}
+
+.ant-btn>.ant-btn-icon {
+  font-size: 20px;
+  padding-top: 0px;
+}
+
+.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 2.5px 8px !important;
+}
+
+.ant-btn-lg>.ant-btn-icon {
+  font-size: 24px;
+  padding-top: 0px;
+}
+
+.ant-btn-lg>span {
+  padding-top: 3px;
+}
+
+.ant-btn-lg {
+  display: inline-flex;
+  align-items: center;
+  padding: 2.5px 8px !important;
+}
+
+.ant-result .ant-result-extra {
+  margin-bottom: 0;
+}
+
+.col-flex-justify-right {
+  align-content: start;
+  justify-content: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-flex-justify-left {
+  align-content: start;
+  justify-content: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ant-card .ant-card-body {
+  padding: 8px 16px 16px 16px;
+}
+
+.ant-card .ant-card-head {
+  padding: 8px 16px;
+}
+
+.slim-card .ant-card-body {
+  padding: 2.5px 8px;
+}
+
+.flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-alert .ant-alert-icon {
+  color: inherit !important;
+  /* Override styles here */
+}
+
+.auto-height-card>.ant-card-body,
+.auto-height-card {
+  height: fit-content;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0px;
+  display: flex;
+}
+
+.mainCard {
+  max-width: 1200px;
+  flex: 1 1 auto;
+  border-radius: 0;
+  max-width: 1200px; 
+  flex-grow: 1
+}
+
+@media only screen and (max-width: 500px) {
+  .mainCard {
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.mainCard, .mainCard .ant-card-head {
+  border-radius: 0;
+}
+
+.fadein {
+  animation: 0.5s fadeInAnim;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeInAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.ant-form-item .ant-form-item-extra, .description-text {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 575px) {
+  .form-item-no-label .ant-form-item-label {
+    display: none;
+  }
+}
